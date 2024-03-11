@@ -11,9 +11,6 @@ router.get("/findUser",authTokenMiddleware,userController.findUser)
 router.put("/updateUser/:id",authTokenMiddleware,userController.updateUser)
 router.delete("/deleteUser/:id",authTokenMiddleware,userController.deleteUser)
 
-router.get("/verifyEmail/:email",userController.verifyEmail)
-router.get("/verifyEmail/:email/:otp",userController.verifyOTP)
-router.get("/verifyEmail/:email/:otp/:password",userController.passwordReset)
 
 //todo
 router.post("/todo/create",authTokenMiddleware,todoController.createTodo)
