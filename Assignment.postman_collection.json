@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "b21d7126-38e7-4395-a7fb-b0793e0dc599",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32486015"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"akash\",\r\n    \"email\": \"akash12@gmail.com\",\r\n    \"phone\": \"01725074294\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/createUser"
+					},
+					"response": []
+				},
+				{
+					"name": "User loggedIn",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ariyan\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/loginUser"
+					},
+					"response": []
+				},
+				{
+					"name": "Find User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYjY3Y2M5YzFiNzYyOTFlOTFkYTYiLCJlbWFpbCI6ImFrYXNoMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJha2FzaCIsImlhdCI6MTcxMDE0MzEwMH0.UN0kDIF_l7r3amw8b9LW5zZqR7bENcKstwNQNaB7cw4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/findUser"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYjY3Y2M5YzFiNzYyOTFlOTFkYTYiLCJlbWFpbCI6ImFrYXNoMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJha2FzaCIsImlhdCI6MTcxMDE0MzEwMH0.UN0kDIF_l7r3amw8b9LW5zZqR7bENcKstwNQNaB7cw4"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"0333333365656\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/updateUser/65eeb67cc9c1b76291e91da6"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYjY3Y2M5YzFiNzYyOTFlOTFkYTYiLCJlbWFpbCI6ImFrYXNoMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJha2FzaCIsImlhdCI6MTcxMDE0MzEwMH0.UN0kDIF_l7r3amw8b9LW5zZqR7bENcKstwNQNaB7cw4"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"12345678909\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/deleteUser/65eea6e7446d6131c9e80466"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "create To do",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlOWMzNmI5M2QwYmQ5OTI3ODU3MjQiLCJlbWFpbCI6InNoaXZhYXlkYXM0ODZAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaGliYWF5IiwiaWF0IjoxNzEwMTM2NDk2fQ.6iSCFqhqFDrD_tr-vSpi49cTneLm-LWlWg3lysWUEP0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"akash12@gmail.com\",\r\n    \"title\": \"this is demo 2\",\r\n    \"description\": \"this is for testing 2\",\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/todo/create"
+					},
+					"response": []
+				},
+				{
+					"name": "show todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYjY3Y2M5YzFiNzYyOTFlOTFkYTYiLCJlbWFpbCI6ImFrYXNoMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJha2FzaCIsImlhdCI6MTcxMDE0MzEwMH0.UN0kDIF_l7r3amw8b9LW5zZqR7bENcKstwNQNaB7cw4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/todo/show"
+					},
+					"response": []
+				},
+				{
+					"name": "update to do",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYjY3Y2M5YzFiNzYyOTFlOTFkYTYiLCJlbWFpbCI6ImFrYXNoMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJha2FzaCIsImlhdCI6MTcxMDE0MzEwMH0.UN0kDIF_l7r3amw8b9LW5zZqR7bENcKstwNQNaB7cw4"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"title\": \"complete node\",\r\n    \"description\": \"node is very important\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/todo/update/65eeb779f3c5ca5c1d3c1e59"
+					},
+					"response": []
+				},
+				{
+					"name": "changeTodoStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYjY3Y2M5YzFiNzYyOTFlOTFkYTYiLCJlbWFpbCI6ImFrYXNoMTJAZ21haWwuY29tIiwidXNlcm5hbWUiOiJha2FzaCIsImlhdCI6MTcxMDE0MzEwMH0.UN0kDIF_l7r3amw8b9LW5zZqR7bENcKstwNQNaB7cw4"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"status\": \"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/todo/changeTodoStatus/65eeb779f3c5ca5c1d3c1e59"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVlYTZlNzQ0NmQ2MTMxYzllODA0NjYiLCJlbWFpbCI6ImFyaXlhbjEyQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiYXJpeWFuIiwiaWF0IjoxNzEwMTM5MTExfQ.119CtUcg_gC4GzAB_5rT_xu03Hb2dcb4cOqvJnwGHUw"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{Base_URL}}/todo/delete/65eea889446d6131c9e80474"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base_URL",
+			"value": "localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}
