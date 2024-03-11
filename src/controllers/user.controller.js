@@ -1,6 +1,5 @@
 
 const User = require("../models/user.model")
-const OtpModel = require("../models/otp.model")
 
 //user create
 exports.userCreate = async function(req,res){
